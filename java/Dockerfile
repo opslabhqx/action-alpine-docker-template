@@ -5,12 +5,12 @@ ARG ALPINE_VERSION=3.20.1
 # renovate: datasource=docker depName=openjdk
 ARG OPENJDK_VERSION=19
 
-FROM openjdk:${OPENJDK_VERSION}-jdk-alpine AS base
+FROM openjdk:${OPENJDK_VERSION} AS base
 
 # Base image for the final stage
 RUN apk add --no-cache bash git curl
 
-FROM openjdk:${OPENJDK_VERSION}-jdk-alpine AS build
+FROM openjdk:${OPENJDK_VERSION} AS build
 
 WORKDIR /app
 
