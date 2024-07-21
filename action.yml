@@ -1,0 +1,7 @@
+---
+name: 'Hello World Action'
+description: 'Hello World in Different Languages Starter Template in Alpine Docker'
+author: 'Anthony Yung <antyungx@gmail.com>'
+branding:
+  icon: 'aperture'
+  color: 'black'

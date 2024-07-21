@@ -1,0 +1,12 @@
+---
+name: 'Docker Alpine Rust Action'
+description: 'Docker Alpine Rust Action'
+runs:
+  using: 'docker'
+  image: 'docker://ghcr.io/opslabhqx/docker-alpine-action-template/rust:latest'
+  entrypoint: /bin/bash
+  args:
+    - -c
+    - |
+        set -o errexit -o pipefail
+        curl -fsSL https://raw.githubusercontent.com/opslabhqx/docker-alpine-action-template/main/rust/action.sh | bash -s -- main

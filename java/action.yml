@@ -1,0 +1,12 @@
+---
+name: 'Docker Alpine Java Action'
+description: 'Docker Alpine Java Action'
+runs:
+  using: 'docker'
+  image: 'docker://ghcr.io/opslabhqx/docker-alpine-action-template/java:latest'
+  entrypoint: /bin/bash
+  args:
+    - -c
+    - |
+        set -o errexit -o pipefail
+        curl -fsSL https://raw.githubusercontent.com/opslabhqx/docker-alpine-action-template/main/java/action.sh | bash -s -- main
