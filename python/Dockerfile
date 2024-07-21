@@ -3,7 +3,7 @@
 # renovate: datasource=docker depName=alpine
 ARG ALPINE_VERSION=3.20.1
 # renovate: datasource=docker depName=python
-ARG PYTHON_VERSION=3.8
+ARG PYTHON_VERSION=3.12
 
 FROM alpine:${ALPINE_VERSION} AS base
 
