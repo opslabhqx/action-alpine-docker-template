@@ -1,0 +1,12 @@
+[package]
+name = "action"
+version = "1.0.0"
+edition = "2021"
+
+[dependencies]
+log = "0.4"
+env_logger = "0.11"
+
+[[bin]]
+name = "action"
+path = "src/main.rs"
