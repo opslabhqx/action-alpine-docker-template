@@ -3,7 +3,7 @@
 # renovate: datasource=docker depName=alpine
 ARG ALPINE_VERSION=3.20.1
 # renovate: datasource=docker depName=openjdk
-ARG OPENJDK_VERSION=19
+ARG OPENJDK_VERSION=19-jdk-alpine
 
 FROM openjdk:${OPENJDK_VERSION} AS base
 
