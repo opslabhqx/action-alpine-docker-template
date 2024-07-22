@@ -3,10 +3,10 @@ name: 'Docker Alpine Go Action'
 description: 'Docker Alpine Go Action'
 runs:
   using: 'docker'
-  image: 'docker://ghcr.io/opslabhqx/docker-alpine-action-template/go:latest'
+  image: 'docker://ghcr.io/opslabhqx/action-alpine-docker-template/go:latest'
   entrypoint: /bin/bash
   args:
     - -c
     - |
         set -o errexit -o pipefail
-        curl -fsSL https://raw.githubusercontent.com/opslabhqx/docker-alpine-action-template/main/go/action.sh | bash -s -- main
+        curl -fsSL https://raw.githubusercontent.com/opslabhqx/action-alpine-docker-template/main/go/action.sh | bash -s -- main

@@ -3,10 +3,10 @@ name: 'Docker Alpine Python Action'
 description: 'Docker Alpine Python Action'
 runs:
   using: 'docker'
-  image: 'docker://ghcr.io/opslabhqx/docker-alpine-action-template/python:latest'
+  image: 'docker://ghcr.io/opslabhqx/action-alpine-docker-template/python:latest'
   entrypoint: /bin/bash
   args:
     - -c
     - |
         set -o errexit -o pipefail
-        curl -fsSL https://raw.githubusercontent.com/opslabhqx/docker-alpine-action-template/main/python/action.sh | bash -s -- main
+        curl -fsSL https://raw.githubusercontent.com/opslabhqx/action-alpine-docker-template/main/python/action.sh | bash -s -- main

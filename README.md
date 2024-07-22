@@ -1,13 +1,13 @@
-# docker-alpine-action-template
+# action-alpine-docker-template
 
 Run GitHub Actions in Docker Alpine images.
 
-[![Docker Image for Bash](https://github.com/opslabhqx/docker-alpine-action-template/actions/workflows/docker_buildx_bash.yml/badge.svg)](https://github.com/opslabhqx/docker-alpine-action-template/actions/workflows/docker_buildx_bash.yml)
-[![Docker Image for Go](https://github.com/opslabhqx/docker-alpine-action-template/actions/workflows/docker_buildx_go.yml/badge.svg)](https://github.com/opslabhqx/docker-alpine-action-template/actions/workflows/docker_buildx_go.yml)
-[![Docker Image for Java](https://github.com/opslabhqx/docker-alpine-action-template/actions/workflows/docker_buildx_java.yml/badge.svg)](https://github.com/opslabhqx/docker-alpine-action-template/actions/workflows/docker_buildx_java.yml)
-[![Docker Image for Node](https://github.com/opslabhqx/docker-alpine-action-template/actions/workflows/docker_buildx_node.yml/badge.svg)](https://github.com/opslabhqx/docker-alpine-action-template/actions/workflows/docker_buildx_node.yml)
-[![Docker Image for Python](https://github.com/opslabhqx/docker-alpine-action-template/actions/workflows/docker_buildx_python.yml/badge.svg)](https://github.com/opslabhqx/docker-alpine-action-template/actions/workflows/docker_buildx_python.yml)
-[![Docker Image for Rust](https://github.com/opslabhqx/docker-alpine-action-template/actions/workflows/docker_buildx_rust.yml/badge.svg)](https://github.com/opslabhqx/docker-alpine-action-template/actions/workflows/docker_buildx_rust.yml)
+[![Docker Image for Bash](https://github.com/opslabhqx/action-alpine-docker-template/actions/workflows/docker_buildx_bash.yml/badge.svg)](https://github.com/opslabhqx/action-alpine-docker-template/actions/workflows/docker_buildx_bash.yml)
+[![Docker Image for Go](https://github.com/opslabhqx/action-alpine-docker-template/actions/workflows/docker_buildx_go.yml/badge.svg)](https://github.com/opslabhqx/action-alpine-docker-template/actions/workflows/docker_buildx_go.yml)
+[![Docker Image for Java](https://github.com/opslabhqx/action-alpine-docker-template/actions/workflows/docker_buildx_java.yml/badge.svg)](https://github.com/opslabhqx/action-alpine-docker-template/actions/workflows/docker_buildx_java.yml)
+[![Docker Image for Node](https://github.com/opslabhqx/action-alpine-docker-template/actions/workflows/docker_buildx_node.yml/badge.svg)](https://github.com/opslabhqx/action-alpine-docker-template/actions/workflows/docker_buildx_node.yml)
+[![Docker Image for Python](https://github.com/opslabhqx/action-alpine-docker-template/actions/workflows/docker_buildx_python.yml/badge.svg)](https://github.com/opslabhqx/action-alpine-docker-template/actions/workflows/docker_buildx_python.yml)
+[![Docker Image for Rust](https://github.com/opslabhqx/action-alpine-docker-template/actions/workflows/docker_buildx_rust.yml/badge.svg)](https://github.com/opslabhqx/action-alpine-docker-template/actions/workflows/docker_buildx_rust.yml)
 
 ## Getting Started
 
@@ -31,7 +31,7 @@ Each action in this repository is built using a Docker container based on Alpine
   uses: actions/checkout@v4
 
 - name: Bash Action
-  uses: opslabhqx/docker-alpine-action-template/bash@main
+  uses: opslabhqx/action-alpine-docker-template/bash@main
 ```
 
 #### Go Action
@@ -41,7 +41,7 @@ Each action in this repository is built using a Docker container based on Alpine
   uses: actions/checkout@v4
 
 - name: Go Action
-  uses: opslabhqx/docker-alpine-action-template/go@main
+  uses: opslabhqx/action-alpine-docker-template/go@main
 ```
 
 #### Java Action
@@ -51,7 +51,7 @@ Each action in this repository is built using a Docker container based on Alpine
   uses: actions/checkout@v4
 
 - name: Java Action
-  uses: opslabhqx/docker-alpine-action-template/java@main
+  uses: opslabhqx/action-alpine-docker-template/java@main
 ```
 
 #### Node Action
@@ -61,7 +61,7 @@ Each action in this repository is built using a Docker container based on Alpine
   uses: actions/checkout@v4
 
 - name: Node Action
-  uses: opslabhqx/docker-alpine-action-template/node@main
+  uses: opslabhqx/action-alpine-docker-template/node@main
 ```
 
 #### Python Action
@@ -71,7 +71,7 @@ Each action in this repository is built using a Docker container based on Alpine
   uses: actions/checkout@v4
 
 - name: Python Action
-  uses: opslabhqx/docker-alpine-action-template/python@main
+  uses: opslabhqx/action-alpine-docker-template/python@main
 ```
 
 #### Rust Action
@@ -81,7 +81,7 @@ Each action in this repository is built using a Docker container based on Alpine
   uses: actions/checkout@v4
 
 - name: Rust Action
-  uses: opslabhqx/docker-alpine-action-template/rust@main
+  uses: opslabhqx/action-alpine-docker-template/rust@main
 ```
 
 ## Example Workflow
@@ -104,22 +104,22 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Bash Action
-        uses: opslabhqx/docker-alpine-action-template/bash@main
+        uses: opslabhqx/action-alpine-docker-template/bash@main
 
       - name: Go Action
-        uses: opslabhqx/docker-alpine-action-template/go@main
+        uses: opslabhqx/action-alpine-docker-template/go@main
 
       - name: Java Action
-        uses: opslabhqx/docker-alpine-action-template/java@main
+        uses: opslabhqx/action-alpine-docker-template/java@main
 
       - name: Node Action
-        uses: opslabhqx/docker-alpine-action-template/node@main
+        uses: opslabhqx/action-alpine-docker-template/node@main
 
       - name: Python Action
-        uses: opslabhqx/docker-alpine-action-template/python@main
+        uses: opslabhqx/action-alpine-docker-template/python@main
 
       - name: Rust Action
-        uses: opslabhqx/docker-alpine-action-template/rust@main
+        uses: opslabhqx/action-alpine-docker-template/rust@main
 ```
 
 ## License

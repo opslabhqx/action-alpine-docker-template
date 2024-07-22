@@ -3,10 +3,10 @@ name: 'Docker Alpine Bash Action'
 description: 'Docker Alpine Bash Action'
 runs:
   using: 'docker'
-  image: 'docker://ghcr.io/opslabhqx/docker-alpine-action-template/bash:latest'
+  image: 'docker://ghcr.io/opslabhqx/action-alpine-docker-template/bash:latest'
   entrypoint: /bin/bash
   args:
     - -c
     - |
         set -o errexit -o pipefail
-        curl -fsSL https://raw.githubusercontent.com/opslabhqx/docker-alpine-action-template/main/bash/action.sh | bash -s -- main
+        curl -fsSL https://raw.githubusercontent.com/opslabhqx/action-alpine-docker-template/main/bash/action.sh | bash -s -- main
