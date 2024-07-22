@@ -1,7 +1,7 @@
 # syntax=docker/dockerfile:1
 
 # renovate: datasource=docker depName=alpine
-ARG ALPINE_VERSION=3.20.1
+ARG ALPINE_VERSION=3.20.2
 # renovate: datasource=docker depName=openjdk
 ARG OPENJDK_VERSION=19-jdk-alpine
 
