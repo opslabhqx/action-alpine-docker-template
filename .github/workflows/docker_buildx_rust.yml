@@ -53,3 +53,9 @@ jobs:
           tags: |
             ghcr.io/${{ github.repository }}/rust:alpine${{ env.ALPINE_VERSION }}
             ghcr.io/${{ github.repository }}/rust:latest
+
+      - name: Run Slack Notification
+        if: always()
+        uses: opslabhqx/action-slacknotify@v1
+        with:
+          webhook_url: ${{ secrets.SLACK_WEBHOOK_URL }}
