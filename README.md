@@ -2,6 +2,7 @@
 
 Run GitHub Actions in Docker Alpine images.
 
+[![Example Workflow](https://github.com/opslabhqx/action-alpine-docker-template/actions/workflows/example_workflow.yml/badge.svg)](https://github.com/opslabhqx/action-alpine-docker-template/actions/workflows/example_workflow.yml)
 [![Docker Image for Bash](https://github.com/opslabhqx/action-alpine-docker-template/actions/workflows/docker_buildx_bash.yml/badge.svg)](https://github.com/opslabhqx/action-alpine-docker-template/actions/workflows/docker_buildx_bash.yml)
 [![Docker Image for Go](https://github.com/opslabhqx/action-alpine-docker-template/actions/workflows/docker_buildx_go.yml/badge.svg)](https://github.com/opslabhqx/action-alpine-docker-template/actions/workflows/docker_buildx_go.yml)
 [![Docker Image for Java](https://github.com/opslabhqx/action-alpine-docker-template/actions/workflows/docker_buildx_java.yml/badge.svg)](https://github.com/opslabhqx/action-alpine-docker-template/actions/workflows/docker_buildx_java.yml)
@@ -87,6 +88,8 @@ Each action in this repository is built using a Docker container based on Alpine
 ## Example Workflow
 
 Below is an example workflow configuration that uses the actions provided in this repository. This workflow is triggered manually and runs the "Hello World" program in all supported languages.
+
+Check out our example workflow [here](https://github.com/opslabhqx/action-alpine-docker-template/actions/workflows/example_workflow.yml).
 
 ```yaml
 ---

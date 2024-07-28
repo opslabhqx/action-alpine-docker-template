@@ -1,0 +1,31 @@
+---
+name: Test-Workflow
+
+on:
+  push:
+  workflow_dispatch:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Bash Action
+        uses: opslabhqx/action-alpine-docker-template/bash@main
+
+      - name: Go Action
+        uses: opslabhqx/action-alpine-docker-template/go@main
+
+      - name: Java Action
+        uses: opslabhqx/action-alpine-docker-template/java@main
+
+      - name: Node Action
+        uses: opslabhqx/action-alpine-docker-template/node@main
+
+      - name: Python Action
+        uses: opslabhqx/action-alpine-docker-template/python@main
+
+      - name: Rust Action
+        uses: opslabhqx/action-alpine-docker-template/rust@main

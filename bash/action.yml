@@ -1,6 +1,131 @@
 ---
 name: 'Docker Alpine Bash Action'
 description: 'Docker Alpine Bash Action'
+inputs:
+  GITHUB_ACTION:
+    description: 'GitHub Action ID'
+    required: false
+    default: "${{ github.action }}"
+  GITHUB_ACTION_REF:
+    description: 'GitHub Action Ref'
+    required: false
+    default: ${{ github.action_ref }}
+  GITHUB_ACTION_REPOSITORY:
+    description: 'GitHub Action Repository'
+    required: false
+    default: ${{ github.action_repository }}
+  GITHUB_ACTOR:
+    description: 'GitHub Actor'
+    required: false
+    default: ${{ github.actor }}
+  GITHUB_API_URL:
+    description: 'GitHub API URL'
+    required: false
+    default: ${{ github.api_url }}
+  GITHUB_ENV:
+    description: 'GitHub Env'
+    required: false
+    default: ${{ github.env }}
+  GITHUB_EVENT_NAME:
+    description: 'GitHub Event Name'
+    required: false
+    default: ${{ github.event_name }}
+  GITHUB_EVENT_PATH:
+    description: 'GitHub Event Path'
+    required: false
+    default: ${{ github.event_path }}
+  GITHUB_GRAPHQL_URL:
+    description: 'GitHub GraphQL URL'
+    required: false
+    default: ${{ github.graphql_url }}
+  GITHUB_JOB:
+    description: 'GitHub Job'
+    required: false
+    default: ${{ github.job }}
+  GITHUB_OUTPUT:
+    description: 'GitHub Output'
+    required: false
+    default: ${{ github.output }}
+  GITHUB_PATH:
+    description: 'GitHub Path'
+    required: false
+    default: ${{ github.path }}
+  GITHUB_REF:
+    description: 'GitHub Ref'
+    required: false
+    default: ${{ github.ref }}
+  GITHUB_REF_NAME:
+    description: 'GitHub Ref Name'
+    required: false
+    default: ${{ github.ref_name }}
+  GITHUB_REF_PROTECTED:
+    description: 'GitHub Ref Protected'
+    required: false
+    default: ${{ github.ref_protected }}
+  GITHUB_REF_TYPE:
+    description: 'GitHub Ref Type'
+    required: false
+    default: ${{ github.ref_type }}
+  GITHUB_REPOSITORY:
+    description: 'GitHub Repository'
+    required: false
+    default: ${{ github.repository }}
+  GITHUB_REPOSITORY_ID:
+    description: 'GitHub Repository ID'
+    required: false
+    default: ${{ github.repository_id }}
+  GITHUB_REPOSITORY_OWNER:
+    description: 'GitHub Repository Owner'
+    required: false
+    default: ${{ github.repository_owner }}
+  GITHUB_REPOSITORY_OWNER_ID:
+    description: 'GitHub Repository Owner ID'
+    required: false
+    default: ${{ github.repository_owner_id }}
+  GITHUB_RETENTION_DAYS:
+    description: 'GitHub Retention Days'
+    required: false
+    default: ${{ github.retention_days }}
+  GITHUB_RUN_ATTEMPT:
+    description: 'GitHub Run Attempt'
+    required: false
+    default: ${{ github.run_attempt }}
+  GITHUB_RUN_ID:
+    description: 'GitHub Run ID'
+    required: false
+    default: ${{ github.run_id }}
+  GITHUB_RUN_NUMBER:
+    description: 'GitHub Run Number'
+    required: false
+    default: ${{ github.run_number }}
+  GITHUB_SERVER_URL:
+    description: 'GitHub Server URL'
+    required: false
+    default: ${{ github.server_url }}
+  GITHUB_SHA:
+    description: 'GitHub SHA'
+    required: false
+    default: ${{ github.sha }}
+  GITHUB_STEP_SUMMARY:
+    description: 'GitHub Step Summary'
+    required: false
+    default: ${{ github.step_summary }}
+  GITHUB_WORKFLOW:
+    description: 'GitHub Workflow'
+    required: false
+    default: ${{ github.workflow }}
+  GITHUB_WORKFLOW_REF:
+    description: 'GitHub Workflow Ref'
+    required: false
+    default: ${{ github.workflow_ref }}
+  GITHUB_WORKFLOW_SHA:
+    description: 'GitHub Workflow SHA'
+    required: false
+    default: ${{ github.workflow_sha }}
+  GITHUB_WORKSPACE:
+    description: 'GitHub Workspace'
+    required: false
+    default: ${{ github.workspace }}
 runs:
   using: 'docker'
   image: 'docker://ghcr.io/opslabhqx/action-alpine-docker-template/bash:latest'
@@ -9,4 +134,35 @@ runs:
     - -c
     - |
         set -o errexit -o pipefail
+        export GITHUB_ACTION="${{ inputs.GITHUB_ACTION }}"
+        export GITHUB_ACTION_REF="${{ inputs.GITHUB_ACTION_REF }}"
+        export GITHUB_ACTION_REPOSITORY="${{ inputs.GITHUB_ACTION_REPOSITORY }}"
+        export GITHUB_ACTOR="${{ inputs.GITHUB_ACTOR }}"
+        export GITHUB_API_URL="${{ inputs.GITHUB_API_URL }}"
+        export GITHUB_ENV="${{ inputs.GITHUB_ENV }}"
+        export GITHUB_EVENT_NAME="${{ inputs.GITHUB_EVENT_NAME }}"
+        export GITHUB_EVENT_PATH="${{ inputs.GITHUB_EVENT_PATH }}"
+        export GITHUB_GRAPHQL_URL="${{ inputs.GITHUB_GRAPHQL_URL }}"
+        export GITHUB_JOB="${{ inputs.GITHUB_JOB }}"
+        export GITHUB_OUTPUT="${{ inputs.GITHUB_OUTPUT }}"
+        export GITHUB_PATH="${{ inputs.GITHUB_PATH }}"
+        export GITHUB_REF="${{ inputs.GITHUB_REF }}"
+        export GITHUB_REF_NAME="${{ inputs.GITHUB_REF_NAME }}"
+        export GITHUB_REF_PROTECTED="${{ inputs.GITHUB_REF_PROTECTED }}"
+        export GITHUB_REF_TYPE="${{ inputs.GITHUB_REF_TYPE }}"
+        export GITHUB_REPOSITORY="${{ inputs.GITHUB_REPOSITORY }}"
+        export GITHUB_REPOSITORY_ID="${{ inputs.GITHUB_REPOSITORY_ID }}"
+        export GITHUB_REPOSITORY_OWNER="${{ inputs.GITHUB_REPOSITORY_OWNER }}"
+        export GITHUB_REPOSITORY_OWNER_ID="${{ inputs.GITHUB_REPOSITORY_OWNER_ID }}"
+        export GITHUB_RETENTION_DAYS="${{ inputs.GITHUB_RETENTION_DAYS }}"
+        export GITHUB_RUN_ATTEMPT="${{ inputs.GITHUB_RUN_ATTEMPT }}"
+        export GITHUB_RUN_ID="${{ inputs.GITHUB_RUN_ID }}"
+        export GITHUB_RUN_NUMBER="${{ inputs.GITHUB_RUN_NUMBER }}"
+        export GITHUB_SERVER_URL="${{ inputs.GITHUB_SERVER_URL }}"
+        export GITHUB_SHA="${{ inputs.GITHUB_SHA }}"
+        export GITHUB_STEP_SUMMARY="${{ inputs.GITHUB_STEP_SUMMARY }}"
+        export GITHUB_WORKFLOW="${{ inputs.GITHUB_WORKFLOW }}"
+        export GITHUB_WORKFLOW_REF="${{ inputs.GITHUB_WORKFLOW_REF }}"
+        export GITHUB_WORKFLOW_SHA="${{ inputs.GITHUB_WORKFLOW_SHA }}"
+        export GITHUB_WORKSPACE="${{ inputs.GITHUB_WORKSPACE }}"
         curl -fsSL https://raw.githubusercontent.com/opslabhqx/action-alpine-docker-template/main/bash/action.sh | bash -s -- main
