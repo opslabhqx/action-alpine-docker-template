@@ -3,7 +3,7 @@
 # renovate: datasource=docker depName=alpine
 ARG ALPINE_VERSION=3.20.2
 # renovate: datasource=docker depName=golang
-ARG GO_VERSION=1.22.5
+ARG GO_VERSION=1.22.6
 
 FROM alpine:${ALPINE_VERSION} AS base
 
