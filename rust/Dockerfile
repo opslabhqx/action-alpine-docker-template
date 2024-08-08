@@ -3,7 +3,7 @@
 # renovate: datasource=docker depName=alpine
 ARG ALPINE_VERSION=3.20.2
 # renovate: datasource=docker depName=rust
-ARG RUST_VERSION=1.80.0
+ARG RUST_VERSION=1.80.1
 
 FROM alpine:${ALPINE_VERSION} AS base
 
